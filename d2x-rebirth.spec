@@ -11,7 +11,7 @@
 Summary:		The port of Descent 2 for Linux
 Name:			d2x-rebirth
 Version:		0.54
-Release:		%mkrel 2
+Release:		%mkrel 3
 License:		GPL
 Group:			Games/Arcade
 URL:			http://www.dxx-rebirth.de/
@@ -45,8 +45,6 @@ Group:		Games/Arcade
 Summary:	Descent 2 for Linux, SDL version
 Requires:	d2x-rebirth = %{version}
 Requires:	SDL
-Requires:	SDL_image
-Requires:	SDL_mixer
 Conflicts:	d2x-rebirth-gl
 
 %description sdl
@@ -65,8 +63,6 @@ rendering.
 Group:		Games/Arcade
 Summary:	Descent 2 for Linux, OpenGL version
 Requires:	d2x-rebirth = %{version}
-Requires:	SDL_image
-Requires:	SDL_mixer
 Conflicts:	d2x-rebirth-sdl
 
 %description gl
