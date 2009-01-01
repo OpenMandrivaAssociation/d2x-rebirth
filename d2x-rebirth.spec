@@ -79,7 +79,7 @@ graphics rendering.
 
 
 %prep
-%setup -q -n %{name} -a2
+%setup -q -n %{name}_v%{version}-src-20081224 -a2
 dos2unix     d2x.ini *.txt
 %__chmod 644 d2x.ini *.txt
 
