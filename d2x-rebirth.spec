@@ -10,12 +10,12 @@
 
 Summary:		The port of Descent 2 for Linux
 Name:			d2x-rebirth
-Version:		0.54
-Release:		%mkrel 3
+Version:		0.55
+Release:		%mkrel 1
 License:		GPL
 Group:			Games/Arcade
 URL:			http://www.dxx-rebirth.de/
-Source:			http://www.dxx-rebirth.de/download/dxx/oss/src/%{name}_v%{version}-src-20080629.tar.gz
+Source:			http://www.dxx-rebirth.de/download/dxx/oss/src/%{name}_v%{version}-src-20081224.tar.gz
 Source1:		%{name}.png
 Source2:		D2XBDE01.zip
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
