@@ -15,7 +15,7 @@ Release:		%mkrel 1
 License:		GPL
 Group:			Games/Arcade
 URL:			http://www.dxx-rebirth.de/
-Source:			http://www.dxx-rebirth.de/download/dxx/oss/src/%{name}_v%{version}-src-20081224.tar.gz
+Source:			http://www.dxx-rebirth.de/download/dxx/oss/src/%{name}_v%{version}-src.tar.gz
 Source1:		%{name}.png
 Source2:		D2XBDE01.zip
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
