@@ -11,7 +11,7 @@
 Summary:		The port of Descent 2 for Linux
 Name:			d2x-rebirth
 Version:		0.55.1
-Release:		%mkrel 1
+Release:		%mkrel 2
 License:		GPL
 Group:			Games/Arcade
 URL:			http://www.dxx-rebirth.de/
@@ -148,7 +148,7 @@ Name=D2x (OpenGL version)
 Comment=The port of Descent 2 for Linux
 Exec=%{_prefix}/games/d2x-rebirth-gl
 Icon=%{name}
-Categories=Game;ActionGame;
+Categories=Game;ArcadeGame;
 EOF
 %__install -m 644 %{name}-gl.desktop \
 	%{buildroot}%{_datadir}/applications
