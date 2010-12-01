@@ -10,8 +10,8 @@
 
 Summary:		The port of Descent 2 for Linux
 Name:			d2x-rebirth
-Version:		0.55.1
-Release:		%mkrel 3
+Version:		0.56
+Release:		%mkrel 1
 License:		GPL
 Group:			Games/Arcade
 URL:			http://www.dxx-rebirth.de/
@@ -29,7 +29,7 @@ BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	physfs-devel
 BuildRequires:	unzip
-Requires:		physfs
+Requires:	physfs
 
 %description
 This is the port of Descent 2, the famous 3D game for PC.
@@ -82,6 +82,7 @@ graphics rendering.
 %setup -q -n %{name}_v%{version}-src -a2
 dos2unix     d2x.ini *.txt
 %__chmod 644 d2x.ini *.txt
+dos2unix CHANGELOG.txt
 
 %build
 # d2x-sdl
@@ -99,6 +100,7 @@ scons %{?jobs:-j%{jobs}} \
 	PREFIX=%{buildroot}%{_prefix}
 
 %install
+rm -rf %{buildroot}
 # binaries
 %__install -dm 755 %{buildroot}%{_prefix}/games/
 %__install -m 755 d2x-rebirth-gl \
