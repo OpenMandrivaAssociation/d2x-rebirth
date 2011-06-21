@@ -10,7 +10,7 @@
 
 Summary:		The port of Descent 2 for Linux
 Name:			d2x-rebirth
-Version:		0.56
+Version:		0.57
 Release:		%mkrel 1
 License:		GPL
 Group:			Games/Arcade
@@ -87,24 +87,26 @@ dos2unix CHANGELOG.txt
 %build
 # d2x-sdl
 scons %{?jobs:-j%{jobs}} \
-	sharepath=%{_datadir}/games/descent2 \
+	sharepath=%{_gamesdatadir}/descent2 \
 	sdl_only=1 \
 	sdlmixer=1 \
 	no_asm=1
+mv d2x-rebirth d2x-rebirth-sdl
 
 # d2x-gl
 scons -c
 scons %{?jobs:-j%{jobs}} \
-	sharepath=%{_datadir}/games/descent2 \
+	sharepath=%{_gamesdatadir}/descent2 \
 	sdlmixer=1 \
 	PREFIX=%{buildroot}%{_prefix}
+cp d2x-rebirth d2x-rebirth-gl
 
 %install
 rm -rf %{buildroot}
 # binaries
 %__install -dm 755 %{buildroot}%{_prefix}/games/
-%__install -m 755 d2x-rebirth-gl \
-	%{buildroot}%{_prefix}/games/
+%__install -m 755 d2x-rebirth  \
+	%{buildroot}%{_prefix}/games/d2x-rebirth-gl
 %__install -m 755 d2x-rebirth-sdl \
 	%{buildroot}%{_prefix}/games/
 
