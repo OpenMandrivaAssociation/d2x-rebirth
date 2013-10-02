@@ -6,6 +6,8 @@
 
 # norootforbuild
 
+%define debug_package %{nil}
+
 Summary:	The port of Descent 2 for Linux
 Name:		d2x-rebirth
 Version:	0.58.1
