@@ -20,9 +20,9 @@ BuildRequires:	dos2unix
 BuildRequires:	gcc-c++
 BuildRequires:	nasm
 BuildRequires:	scons
-BuildRequires:	SDL-devel
-BuildRequires:	SDL_image-devel
-BuildRequires:	SDL_mixer-devel
+BuildRequires:	pkgconfig(sdl)
+BuildRequires:	pkgconfig(SDL_image)
+BuildRequires:	pkgconfig(SDL_mixer)
 BuildRequires:	physfs-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
